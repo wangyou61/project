@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +37,7 @@
 
 <!-- 导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="">产品管理</a>
+    <a class="navbar-brand" href="#">产品管理</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -61,10 +60,10 @@
 <div class="sidebar">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link" href="chanpianguanli.html">产品列表</a>
+            <a class="nav-link active" href="#">产品列表</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">添加产品</a>
+            <a class="nav-link" href="#">添加产品</a>
         </li>
     </ul>
 </div>
@@ -81,6 +80,7 @@
             <th scope="col">产品名称</th>
             <th scope="col">价格</th>
             <th scope="col">库存</th>
+            <th scope="col">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -89,41 +89,17 @@
             <td>Product A</td>
             <td>$19.99</td>
             <td>100</td>
+            <td>
+                <button type="button" class="btn btn-info btn-sm">编辑</button>
+                <button type="button" class="btn btn-danger btn-sm">删除</button>
+            </td>
         </tr>
         <tr>
             <th scope="row">2</th>
             <td>Product B</td>
             <td>$29.99</td>
             <td>50</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <!-- 添加产品表单 -->
-    <div class="product-form mt-4">
-        <h2>添加产品</h2>
-        <form>
-            <div class="form-group">
-                <label for="productName">产品名称</label>
-                <input type="text" class="form-control" id="productName" placeholder="Enter product name">
-            </div>
-            <div class="form-group">
-                <label for="productPrice">价格</label>
-                <input type="text" class="form-control" id="productPrice" placeholder="Enter product price">
-            </div>
-            <div class="form-group">
-                <label for="productStock">库存</label>
-                <input type="text" class="form-control" id="productStock" placeholder="Enter product stock">
-            </div>
-            <button type="submit" class="btn btn-primary">添加产品</button>
-        </form>
-    </div>
-</div>
-
-<!-- 引入 Bootstrap JS 和 Popper.js -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+            <td>
+                <button type="button" class="btn btn-info btn-sm">编辑</button>
+                <button type="button" class="btn btn-danger btn-sm">删除</button>
+            

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>产品管理</title>
+    <title>用户管理</title>
 
     <!-- 引入 Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -29,7 +28,7 @@
             margin-left: 250px;
         }
 
-        .product-form {
+        .user-form {
             max-width: 400px;
         }
     </style>
@@ -38,7 +37,7 @@
 
 <!-- 导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="">产品管理</a>
+    <a class="navbar-brand" href="#">用户管理</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -48,10 +47,10 @@
                 <a class="nav-link" href="#">首页</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">用户</a>
+                <a class="nav-link active" href="#">用户</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">产品</a>
+                <a class="nav-link" href="#">设置</a>
             </li>
         </ul>
     </div>
@@ -61,61 +60,73 @@
 <div class="sidebar">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link" href="chanpianguanli.html">产品列表</a>
+            <a class="nav-link active" href="#">用户列表</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">添加产品</a>
+            <a class="nav-link" href="#">添加用户</a>
         </li>
     </ul>
 </div>
 
 <!-- 页面内容 -->
 <div class="main-content container-fluid">
-    <h2>产品列表</h2>
+    <h2>用户列表</h2>
 
-    <!-- 产品列表 -->
+    <!-- 用户列表 -->
     <table class="table mt-4">
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">产品名称</th>
-            <th scope="col">价格</th>
-            <th scope="col">库存</th>
+            <th scope="col">用户名</th>
+            <th scope="col">邮箱</th>
+            <th scope="col">角色</th>
+            <th scope="col">操作</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <th scope="row">1</th>
-            <td>Product A</td>
-            <td>$19.99</td>
-            <td>100</td>
+            <td>John Doe</td>
+            <td>johndoe@example.com</td>
+            <td>管理员</td>
+            <td>
+                <button type="button" class="btn btn-info btn-sm">编辑</button>
+                <button type="button" class="btn btn-danger btn-sm">删除</button>
+            </td>
         </tr>
         <tr>
             <th scope="row">2</th>
-            <td>Product B</td>
-            <td>$29.99</td>
-            <td>50</td>
+            <td>Jane Doe</td>
+            <td>janedoe@example.com</td>
+            <td>用户</td>
+            <td>
+                <button type="button" class="btn btn-info btn-sm">编辑</button>
+                <button type="button" class="btn btn-danger btn-sm">删除</button>
+            </td>
         </tr>
         </tbody>
     </table>
 
-    <!-- 添加产品表单 -->
-    <div class="product-form mt-4">
-        <h2>添加产品</h2>
+    <!-- 添加用户表单 -->
+    <div class="user-form mt-4">
+        <h2>添加用户</h2>
         <form>
             <div class="form-group">
-                <label for="productName">产品名称</label>
-                <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
             </div>
             <div class="form-group">
-                <label for="productPrice">价格</label>
-                <input type="text" class="form-control" id="productPrice" placeholder="Enter product price">
+                <label for="email">邮箱</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
             </div>
             <div class="form-group">
-                <label for="productStock">库存</label>
-                <input type="text" class="form-control" id="productStock" placeholder="Enter product stock">
+                <label for="role">角色</label>
+                <select class="form-control" id="role">
+                    <option>管理员</option>
+                    <option>用户</option>
+                </select>
             </div>
-            <button type="submit" class="btn btn-primary">添加产品</button>
+            <button type="submit" class="btn btn-primary">添加用户</button>
         </form>
     </div>
 </div>
