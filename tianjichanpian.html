@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>添加产品</title>
+
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 自定义样式 -->
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 56px;
+            left: 0;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+
+        .main-content {
+            margin-left: 250px;
+        }
+
+        .product-form {
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">添加产品</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">首页 <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="guanli.html">用户管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="shezhi.html">设置</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 侧边栏 -->
+<div class="sidebar">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="chanpian.html">产品列表</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">添加产品</a>
+        </li>
+    </ul>
+</div>
+
+<!-- 页面内容 -->
+<div class="main-content container-fluid">
+    <h2>添加产品</h2>
+
+    <!-- 添加产品表单 -->
+    <div class="product-form mt-4">
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productName">产品名称</label>
+                <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">价格</label>
+                <input type="text" class="form-control" id="productPrice" placeholder="Enter product price" required>
+            </div>
+            <div class="form-group">
+                <label for="productStock">库存</label>
+                <input type="text" class="form-control" id="productStock" placeholder="Enter product stock" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="addProduct()">添加产品</button>
+        </form>
+    </div>
+</div>
+
+<!-- 引入 Bootstrap JS 和 Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- 添加产品的 JavaScript 代码 -->
+<script>
+    function addProduct() {
+        // 获取表单数据
+        var productName = document.getElementById('productName').value;
+        var productPrice = document.getElementById('productPrice').value;
+        var productStock = document.getElementById('productStock').value;
+
+        // 构建产品对象
+        var product = {
+            name: productName,
+            price: productPrice,
+            stock: productStock
+        };
+
+        // 发送产品数据到服务器的逻辑可以在这里添加
+        // 此处仅为演示，您需要替换为实际的后端请求逻辑
+
+        // 清空表单
+        document.getElementById('productName').value = '';
+        document.getElementById('productPrice').value = '';
+        document.getElementById('productStock').value = '';
+
+        // 提示用户添加成功（此处可以根据实际需求添加更复杂的反馈）
+        alert('产品添加成功！');
+    }
+</script>
+
+</body>
+</html>
